@@ -1,7 +1,7 @@
 # my-example-compose
 
 ## clone the git in you terminal 
-```git clone ```
+```git clone https://github.com/driller23/my-example-compose.git```
 
 ## run docker compose 
 ```docker compose up -d```
