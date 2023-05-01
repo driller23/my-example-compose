@@ -8,6 +8,9 @@
 ## clone the git in you terminal 
 ```git clone https://github.com/driller23/my-example-compose.git```
 
+## change to driectory code
+```cd my-example-compose```
+
 ## run docker compose 
 ```docker compose up -d```
 
@@ -16,7 +19,7 @@
 
 ## watch in action
 - open web browser on port 80
-- change web/servers.js 
+- change web/server.js 
 - see in the terminal that docker is rebuild the conatiner 
 
 ```└❯ docker compose alpha watch
