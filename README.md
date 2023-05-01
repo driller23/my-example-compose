@@ -1,5 +1,10 @@
 # my-example-compose
 
+## requirements
+1. git 
+2. docker 
+3. docker-compose OR docker plugin aka: docker compose 
+
 ## clone the git in you terminal 
 ```git clone https://github.com/driller23/my-example-compose.git```
 
