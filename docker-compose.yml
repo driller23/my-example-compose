@@ -1,0 +1,38 @@
+version: '3.9'
+services:
+  redis:
+    image: 'redis:alpine'
+    ports:
+      - '6379:6379'
+  web:
+    restart: on-failure
+    build: ./web
+    ports:
+      - '81:5000'
+    x-develop:
+      watch:
+        - action: rebuild
+          path: ./web
+          target: /usr/src/app
+        - action: rebuild
+          path: package.json
+  app:
+    restart: on-failure
+    build: ./app
+    ports:
+      - '82:5000'
+    x-develop:
+      watch:
+        - action: rebuild
+          path: ./app
+          target: /usr/src/app
+        - action: rebuild
+          path: package.json
+  nginx:
+    build: ./nginx
+    ports:
+    - '80:80'
+    depends_on:
+    - web
+    - app
+
